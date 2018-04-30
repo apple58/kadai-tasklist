@@ -99,7 +99,7 @@ class MessagesController extends Controller
     {
         $this->validate($request, [
             'content' => 'required|max:255',
-        ])
+        ]);
         $message = Message::find($id);
         $message->content = $request->content;
         $message->save();
