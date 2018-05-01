@@ -54,6 +54,7 @@ class MessagesController extends Controller
         
         $message = new Message;
         $message->content = $request->content;
+        $message->title = $request->title;
         $message->save();
 
         return redirect('/');
@@ -104,6 +105,7 @@ class MessagesController extends Controller
         ]);
         $message = Message::find($id);
         $message->content = $request->content;
+        $message->title = $request->title;
         $message->save();
 
         return redirect('/');
